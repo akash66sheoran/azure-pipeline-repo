@@ -7,4 +7,6 @@ pool:
 steps:
   - checkout: self
 
-  - script: 'pwd'
+  - script: '$(Agent.BuildDirectory)'
+
+  - script: '$(Build.SourcesDirectory)'
