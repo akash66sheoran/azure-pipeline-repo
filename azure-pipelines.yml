@@ -5,9 +5,8 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  
-  - script: 'git clone https://github.com/akash66sheoran/ansible-demo-repo.git'
+  - checkout: self
 
-  - script: 'ls $(Agent.BuildDirectory)'
+  - script: 'git clone https://github.com/akash66sheoran/ansible-demo-repo.git'
 
   - script: 'ls $(Build.SourcesDirectory)'
