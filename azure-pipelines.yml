@@ -7,6 +7,6 @@ pool:
 steps:
   - checkout: self
 
-  - script: 'echo "$(Agent.BuildDirectory)"'
+  - script: 'ls $(Agent.BuildDirectory)'
 
-  - script: 'echo "$(Build.SourcesDirectory)"'
+  - script: 'ls $(Build.SourcesDirectory)'
