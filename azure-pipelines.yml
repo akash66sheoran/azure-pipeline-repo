@@ -7,4 +7,4 @@ pool:
 steps:
   - script: 'ls $(Build.SourcesDirectory)'
 
-  - script: 'echo $(Agent.MachineName)'
+  - script: 'echo $(Agent.HomeDirectory)'
