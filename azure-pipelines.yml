@@ -5,6 +5,4 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - script: 'ls $(Build.SourcesDirectory)'
-
-  - script: 'echo $(Agent.HomeDirectory)'
+  - script: 'echo $(Agent.WorkFolder)'
