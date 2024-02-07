@@ -5,10 +5,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - checkout: self
-
-  - script: 'git clone https://github.com/akash66sheoran/ansible-demo-repo.git'
-
   - script: 'ls $(Build.SourcesDirectory)'
 
-  - script: 'echo $(Agent.JobStatus)'
+  - script: 'echo $(Agent.MachineName)'
