@@ -7,3 +7,7 @@ pool:
 parameters:
   - name: file_name
     type: string
+    values:
+      - file.txt
+      - sample.txt
+      - random.txt
