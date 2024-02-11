@@ -4,5 +4,6 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
-steps:
-  - script: 'ls $(Agent.BuildDirectory)'
+parameters:
+  - name: file_name
+    type: string
