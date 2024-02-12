@@ -4,5 +4,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - script: ls -al $(Agent.TempDirectory)
-    displayName: 'output'
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      cat /dev/urandom | LANG=c tr -dc A-Za-z0-9 | head -c 64 > $(Agent.TempDirectory)/hashicorp-vault-password
+      chmod go-rwx $(Agent.TempDirectory)/hashicorp-vault-password
+      echo "TEMPORARY PASSWORD GENERATED"
