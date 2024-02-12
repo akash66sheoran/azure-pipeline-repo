@@ -4,4 +4,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-  - script: ls $(Agent.TempDirectory)
+  - script: ls -al $(Agent.TempDirectory)
+    displayName: 'output'
